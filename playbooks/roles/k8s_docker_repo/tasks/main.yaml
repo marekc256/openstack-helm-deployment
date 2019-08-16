@@ -1,7 +1,13 @@
-- name: /var/lib/kubelet/config.json
+- name: Ensure /var/lib/kubelet directory
+  file:
+    path: /var/lib/kubelet
+    mode: 0644
+    state: directory
+
+- name: Place config.json into /var/lib/kubelet/
   template:
     src: config.json.j2
-    dest: /var/lib/kubelet/config.json
+    dest: /var/lib/kubelet/
     owner: root
     group: root
     mode: 0600

@@ -3,7 +3,7 @@
   sudo: yes
   sudo_user: ubuntu
   shell: |
-    docker login "{{ repo_name }}" -u "{{ repo_login }}" -p"{{ repo_password }}"
+    sudo docker login "{{ repo_name }}" -u "{{ repo_login }}" -p"{{ repo_password }}"
   ignore_errors: false
 
 - when: not repo_name and not repo_login and not repo_password
