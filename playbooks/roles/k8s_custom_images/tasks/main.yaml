@@ -1,8 +1,16 @@
+- name: Ensure software config directory
+  file:
+    path: /home/ubuntu/treasuremap/site/airskiff/software/config
+    owner: ubuntu
+    group: ubuntu
+    mode: 0644
+    state: directory
+
 - name: Upload custom docker image list
-  copy:
+  template:
     src: "{{ item }}"
     dest: /home/ubuntu/treasuremap/site/airskiff/software/config/
     owner: ubuntu
     group: ubuntu
   with_fileglob:
-    - *.yaml
+    - *.yaml.j2

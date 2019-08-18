@@ -24,21 +24,21 @@ data:
         ks_user: docker.io/openstackhelm/heat:ocata-ubuntu_xenial
         ks_service: docker.io/openstackhelm/heat:ocata-ubuntu_xenial
         ks_endpoints: docker.io/openstackhelm/heat:ocata-ubuntu_xenial
-        nova_api: docker.dev.cloud.ovh.net/m-nova:hash-1a1a1a
-        nova_cell_setup: docker.dev.cloud.ovh.net/m-nova:hash-1a1a1a
+        nova_api: {{ repo_name }}/m-nova:hash-1a1a1a
+        nova_cell_setup: {{ repo_name }}/m-nova:hash-1a1a1a
         nova_cell_setup_init: docker.io/openstackhelm/heat:ocata-ubuntu_xenial
-        nova_compute: docker.dev.cloud.ovh.net/m-nova:hash-1a1a1a
+        nova_compute: {{ repo_name }}/m-nova:hash-1a1a1a
         nova_compute_ironic: 'docker.io/kolla/ubuntu-source-nova-compute-ironic:ocata'
-        nova_compute_ssh: docker.dev.cloud.ovh.net/m-nova:hash-1a1a1a
-        nova_conductor: docker.dev.cloud.ovh.net/m-nova:hash-1a1a1a
-        nova_consoleauth: docker.dev.cloud.ovh.net/m-nova:hash-1a1a1a
-        nova_db_sync: docker.dev.cloud.ovh.net/m-nova:hash-1a1a1a
-        nova_novncproxy: docker.dev.cloud.ovh.net/m-nova:hash-1a1a1a
+        nova_compute_ssh: {{ repo_name }}/m-nova:hash-1a1a1a
+        nova_conductor: {{ repo_name }}/m-nova:hash-1a1a1a
+        nova_consoleauth: {{ repo_name }}/m-nova:hash-1a1a1a
+        nova_db_sync: {{ repo_name }}/m-nova:hash-1a1a1a
+        nova_novncproxy: {{ repo_name }}/m-nova:hash-1a1a1a
         nova_novncproxy_assets: 'docker.io/kolla/ubuntu-source-nova-novncproxy:ocata'
-        nova_placement: docker.dev.cloud.ovh.net/m-nova:hash-1a1a1a
-        nova_scheduler: docker.dev.cloud.ovh.net/m-nova:hash-1a1a1a
+        nova_placement: {{ repo_name }}/m-nova:hash-1a1a1a
+        nova_scheduler: {{ repo_name }}/m-nova:hash-1a1a1a
         nova_service_cleaner: 'docker.io/port/ceph-config-helper:v1.10.3'
-        nova_spiceproxy: docker.dev.cloud.ovh.net/m-nova:hash-1a1a1a
+        nova_spiceproxy: {{ repo_name }}/m-nova:hash-1a1a1a
         nova_spiceproxy_assets: 'docker.io/kolla/ubuntu-source-nova-spicehtml5proxy:ocata'
         test: docker.io/xrally/xrally-openstack:1.3.0
         image_repo_sync: docker.io/docker:17.07.0
