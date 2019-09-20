@@ -5,6 +5,8 @@
   sudo_user: ubuntu
   shell: |
     git clone https://opendev.org/airship/treasuremap.git treasuremap 2>&1 | tee -a "logs/cluster-logs-{{ ansible_nodename }}-{{ namespace }}"
+    cd treasuremap
+    git checkout 0857054f837504254d2038973b1bb6f4e7301421 2>&1 | tee -a "logs/cluster-logs-{{ ansible_nodename }}-{{ namespace }}"
   ignore_errors: true
   loop: "{{ groups['k8s_contr'] }}"
   run_once: true
